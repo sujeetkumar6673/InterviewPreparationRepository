@@ -11,7 +11,7 @@ namespace InterViewPreparation.Controllers
     {
         InterviewPreparationEntities1 db = new InterviewPreparationEntities1();
 
-        public ActionResult Index()
+        public ActionResult Register()
         {
             return View();
         }

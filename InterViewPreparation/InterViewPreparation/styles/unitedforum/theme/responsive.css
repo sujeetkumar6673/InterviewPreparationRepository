@@ -1,0 +1,240 @@
+@media screen and (max-width:1180px)
+{
+html { font-size:8px; }
+h3 { font-size:1.8rem; }
+#wrap, .header, .header-very-top-child, #nav-breadcrumbs {max-width:960px;}
+ul.topiclist.forums, ul.topiclist.topics { background-position:58rem top; }
+nav { padding-top:0.9rem; padding-bottom:0.9rem; }
+nav ul, nav ul ul { font-size:1.6rem; }
+nav ul ul { top:3.2rem; }
+.header-login a { background-size:auto 60%; }
+.logo { padding-top:1.3rem; }
+.search-header .search-adv-icon { background-size:90% auto; }
+button.search-icon-header { width:4rem; height:4.4rem; background-size:80% auto; }
+#sidebar-login-desc { font-size:1.4rem; }
+#sidebar-login label { font-size:1.4rem; }
+#sidebar-login .forgetmenot a { font-size:1.4rem; }
+#sidebar-login .forgetmenot label { font-size:1.4rem; }
+a.logout-button span { background-size:auto 100%; }
+#sidebar-login .ucp-button-settings { background-size:100% 100%; }
+#sidebar-login .ucp-button-messages { background-size:auto 100%; }
+#sidebar-login .ucp-button-notifications { background-size:auto 100%; }
+
+
+.online-list h3, .birthday-list h3 { font-size:1.5rem; }
+
+fieldset.fields1 ul.recipients  input.button2 { font-size:1.6rem;}
+#refresh_vc { font-size:1.6rem; }
+
+#page-body .content p { font-size:1.7rem; }
+.postbody .content { font-size:1.6rem; }
+.content dl.faq { font-size:1.4rem;}
+.postbody-container { background-position:64.2rem 3rem; }
+ul.topiclist.topics dt { padding-right:38.6rem; }
+.topic-stats-replies { background-size:auto 22px; }
+.topic-stats-views { background-size:auto 18px; }
+ul.topiclist li dl.announce_read_mine dt .list-inner, ul.topiclist li dl.announce_read dt .list-inner { background-size:4.2rem auto; }
+.new-topic-button { font-size:13px; padding:5px 13px 5px 13px; }
+.reply-button, .locked-button { font-size:12px; padding:4px 11px 4px 11px; }
+.postbody { width:60rem; }
+
+.search-box { margin-top:-0.5rem; }
+
+h3.post-heading {font-size:2rem; }
+.codebox { font-size:1.5rem; }
+.codebox code { font-size:1.5rem; }
+.signature { font-size:1.4rem; }
+.attachbox dd { font-size:1.6rem; }
+
+#viewprofile ul.profile-details { width:54rem; }
+#viewprofile .rank-image { margin-top:-4.4rem; }
+#viewprofile ul li, #viewprofile ul li a, #viewprofile ul li select, #viewprofile ul li .button2 { font-size:1.6rem!important; }
+#cp-menu #navigation ul li, #cp-menu #navigation ul li a { font-size:1.5rem; }
+.cp-mini { font-size:1.5rem; }
+#bday_day, #bday_month, #bday_year { font-size:1.5rem; }
+.section-ucp .ucp-main #ucp fieldset dl dd label { display:block; margin-bottom:1rem!important; float:left; }
+
+ul.linklist > li {font-size:1.4rem;}
+
+.dropdown-visible .tools-icon:before,.nojs .dropdown-container:hover .tools-icon:before{}
+.dropdown-visible .dropdown-select:after,.nojs .dropdown-container:hover .dropdown-select:after {}
+
+.tools-icon:before {} 
+
+a.arrow-right { padding-right:1.4rem; font-size:1.2rem; }
+
+.memberlist-grid li { font-size:1.6rem; }
+.memberlist-grid li .rank-img img { height:2.4rem; width:auto; }
+
+.imageset.icon_topic_latest, .imageset.icon_topic_attach, .imageset.icon_topic_unapproved { background-size:100% auto; }
+
+}
+
+
+
+
+
+@media screen and (max-width:960px)
+{
+#wrap, .header, .header-very-top-child, #nav-breadcrumbs {max-width:620px;}
+.header-container nav { display:none; }
+#menu-responsive { display:block; }
+.logged-in .header-very-top { padding-bottom:0.6rem; }
+.header-very-top { margin-bottom:4rem; }
+.top-bar-right-welcome, .top-bar-right-welcome a { visibility:visible; color:#ffffff; font-size:2rem; font-family:Georgia; color:#eaeaea; font-style:italic; padding-top:1.1rem; }
+#site-description { width:100%; }
+.side-desc { width:58rem; }
+.search-header { margin:0 auto; margin-top:3rem; margin-right:21rem; }
+#page-body { width:100% }
+ul.topiclist.forums, ul.topiclist.topics { background-position:56rem top; }
+.postbody-container { background-position:62.5rem 3rem; }
+
+#sidebar { width:100%; float:left; top:5rem; }
+.section-ucp #sidebar { top:5rem; }
+#sidebar-login { float:left; width:37%; margin-top:0px; margin-bottom:5rem; }
+.advertisement { float:right; width:49%; margin-top:0px; }
+.advertisement-title { font-size:3.8rem; margin-bottom:1.8rem; font-weight:800; text-transform:uppercase; display:block; }
+.general-stats { margin-bottom:5rem; clear:both; overflow:hidden; }
+
+.general-stats { font-size:1.5rem; }
+.general-stats-col-1, .general-stats-col-2, .general-stats-col-3 { font-size:3.2rem; }
+.general-stats-col-1 div, .general-stats-col-2 div, .general-stats-col-3 div { font-size:2rem; }
+
+.online-list p, .stat-block p { font-size:1.6rem; }
+.online-list em { font-size:1.6rem; }
+
+#viewprofile ul.profile-details { width:52rem; }
+
+.postbody { width:58.1rem; }
+
+}
+
+
+@media screen and (max-width:630px)
+{
+#wrap, .header, .header-very-top-child, #nav-breadcrumbs {max-width:300px;}
+.header-very-top { margin-bottom:2rem; }
+#page-header { height:35rem; }
+.site-description { margin-top:0px; padding-bottom:2rem; }
+.side-desc { width:100%; box-shadow:none; text-align:center; padding:2.5rem 0 0rem 0rem; }
+.logo { width:100%; text-align:center; padding-top:0rem; padding-right:0rem; }
+.logo img { height:6rem; width:auto; }
+.search-header { margin-top:3rem; margin-right:0rem; }
+
+.topiclist.forums .row dl dt { padding-right:0px; }  
+.topiclist.forums .row dl dd.lastpost { position:static; width:100%; margin-top:1rem; padding-top:1rem; padding-left:0px; padding-bottom:0px; border-top:1px dotted #ebebeb; }
+.subforums-wrap { display:block; width:100%; margin-bottom:1rem; border:none; }
+.subforums-wrap a { border-top:1px solid #ebebeb; border-bottom:1px solid #ebebeb; border-right:1px solid #ebebeb; }
+ul.topiclist.topics dl dt, ul.topiclist.topics dl.sticky_read dt, ul.topiclist.topics li.locked dl.sticky_read dt { padding-right:0rem!important; }
+.topiclist.topics li dl dt { margin-bottom:1.3rem; padding-bottom:1.3rem; border-bottom:1px dotted #ebebeb; width:100%; }
+ul.topiclist.topics dl dd.lastpost { position:static; width:50%; float:right; }
+.topic-stats-column { position:static; width:12rem; text-align:center; }
+
+.postbody { width:197px; }
+h3.post-heading { margin-right:0px!important; }
+.postprofile { min-height:6rem; width:7rem; }
+.postbody-container { padding-right:8rem; background-position:28.5rem 1.3rem; }
+.profile-rank { margin-top:-2rem; margin-bottom:0.3rem!important; }
+.profile-rank img { height:1.2rem; width:auto; }
+.has-profile .post-buttons{top:0.2rem;right:0.2rem;}
+.post-buttons li .button { border:none; }
+
+.breadcrumbs .crumb a { padding-left:0.5rem!important; padding-right:0.5rem; }
+
+#postingbox .fields1 dl dd { margin-left:0rem; } 
+#postingbox .fields1 dl dd input.inputbox { width:285px!important; }
+#postingbox #smiley-box { width:95%; float:left; }
+#postingbox #message-box { width:95%; }
+.bbcode-status { display:none; }
+#format-buttons .button2 { padding:0.1rem!important; font-size:1.4rem!important; margin-bottom:0.5rem; margin-right:0.2rem; }
+#postform .button2, #postform .button1 { margin-top:0px; }
+
+#postingbox #format-buttons .bbcode-size { margin-left:0.3rem; }
+#postform .submit-buttons .button2, #postform .submit-buttons .button1 { padding:0.5rem 1.5rem!important; float:left; }
+
+.action-bar .pagination { width:100%; text-align:left; margin-top:2rem!important; }
+
+#sidebar-login { float:left; width:79%; margin-top:0px; margin-bottom:5rem; }
+.logged-in #sidebar-login { width:84%; }
+.advertisement { float:left; width:100%; margin-top:0px; }
+.advertisement-title { display:none; }
+.general-stats-col-1, .general-stats-col-2, .general-stats-col-3 { font-size:2.8rem; }
+.general-stats-col-1 div, .general-stats-col-2 div, .general-stats-col-3 div { font-size:1.8rem; }
+
+.online-list p, .stat-block p { font-size:1.6rem; }
+.online-list em { font-size:1.6rem; }
+
+#tabs ul li.tab { display:block!important; margin-bottom:1px; }
+#tabs ul li.responsive-tab { display:none!important; }
+#cp-menu { width:100%; }
+#cp-main { width:100%; }
+#cp-main .pagination { line-height:1.7em; }
+.section-ucp .panel { padding-left:0px; padding-right:0px; }
+#cp-main .right-box { width:100%; }
+.pmlist-mark, #cp-main .left-box { width:100%!important; margin-bottom:1rem; }
+.pm .postbody { width:65%; }
+.pm .postbody h3 { width:100%; }
+#cp-main .left-box { width:70%!important; }
+.pmlist-mark { position:relative; left:-2rem!important; }
+.pmlist-mark, .pmlist-mark a { font-size:1.2rem; }
+#cp-main .display-options { padding-left:0px!important; }
+
+.notification_list .list-inner.with-mark { padding-right:3rem; }
+.global-settings { width:300px!important; }
+.global-settings dl { width:80%!important; margin:1rem 0; }
+.global-settings dl dt { width:70%!important; }
+.global-settings dl dd { margin-left:0px; }
+
+.display-options label { margin-bottom:1rem; }
+
+#nav-footer { text-align:left; }
+#nav-footer li { margin-left:0px!important; }
+
+table#team .rank-img { display:none; }
+
+#viewprofile ul.profile-details { width:100%; margin-top:3rem; }
+#viewprofile .column1 { margin-top:-1rem; }
+#viewprofile .column1, #viewprofile .column2 { width:100%; }
+
+.search .postbody { width:55%; }
+
+.captcha-image img { width:32rem; }
+#confirm_code { padding:0.8rem!important; }
+.section-memberlist .fields2, .section-memberlist .fields2 dl dd input, .section-memberlist .fields2 dl dd textarea { width:33rem!important; }
+.fields2 dl dt { width:100%; margin-bottom:0.6rem; }
+.fields2 dl dd { margin-left:0px; }
+
+.section-search fieldset dl dt { width:100%; margin-bottom:0.9rem; }
+.section-search fieldset dl dd { margin-left:0px;}
+
+.panel { padding-left:0px; padding-right:0px; }
+
+#search_memberlist .fields1.column1, #search_memberlist .fields1.column2 { width:100%; }
+
+.button1 { font-size:14px; font-weight:700; }
+.button2 { font-size:14px; font-weight:700; }
+#format-buttons .button2, .display-options .button2, .profile-details .button2, #tz_select_date_suggest, .recipients .button2, .attach-controls .button2, #cp-main .display-actions .button2 { font-size:1.3rem; }
+
+
+.memberlist-grid li { width:35%; float:left; margin-left:2.3rem; margin-right:2.7rem; font-size:1.7rem; line-height:1.4em; margin-bottom:3.1rem; }
+.memberlist-grid li .rank-img { margin-top:-3rem;}
+.memberlist-grid li .rank-img img { height:2rem; width:auto; }
+
+.section-memberlist .action-bar.bottom { width:60%; float:right; text-align:right; margin-top:10px; }
+.section-memberlist .action-bar.bottom .pagination { text-align:right; position:relative; z-index-10; }
+.section-memberlist .action-bar.bottom .pagination ul { float:right; margin-top:-4px; } 
+.section-memberlist #jumpbox { margin-top:31px; margin-right:5px; float:left; }
+
+}
+
+
+
+
+/* Responsive Design
+---------------------------------------- */
+.responsive-hide { display:none !important; }
+.responsive-show { display:none!important; }
+.responsive-show-inline { display:none !important; }
+.responsive-show-inline-block { display:none !important; }
+
+

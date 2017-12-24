@@ -2,7 +2,510 @@
     ViewBag.Title = "Home Page";
 }
 
-<h2>@ViewBag.Message</h2>
-<p>
-    To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
-</p>
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+
+<!-- Mirrored from diaboliquedesign.com/demo/1/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 24 Dec 2017 13:38:24 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <link rel="icon" type="image/png" href="styles/unitedforum/theme/images/favicon.png" />
+
+    <title>Diabolique Design - Index page</title>
+
+    <link rel="alternate" type="application/atom+xml" title="Feed - Diabolique Design" href="feed.php">
+    <link rel="alternate" type="application/atom+xml" title="Feed - Active Topics" href="feed5add.php?mode=topics_active">
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400i,700,800" rel="stylesheet">
+
+
+    <link href="../../styles/unitedforum/theme/stylesheetac81.css?assets_version=6" rel="stylesheet">
+    <link href="../../styles/unitedforum/theme/en/stylesheetac81.html?assets_version=6" rel="stylesheet">
+    <link href="../../styles/unitedforum/theme/responsive.css" rel="stylesheet">
+    <link href="../../styles/unitedforum/theme/mystyle.css" rel="stylesheet">
+    <link href="../../styles/unitedforum/theme/mystyle.css" rel="stylesheet" />
+
+
+    <!--[if lte IE 9]>
+	<link href="./styles/unitedforum/theme/tweaks.css?assets_version=6" rel="stylesheet">
+<![endif]-->
+
+    <script src="../../Scripts/jquery-1.10.2.min.js"></script>
+
+
+    <script src="../../Scripts/bootstrap.min.js"></script>
+
+    <script>
+        function SignUp() {
+            $("#ShowModal").modal();
+            $("#wrap").hide();
+        }
+        function redirectOnClick() {
+            document.location = 'Register/Register';
+        }
+        function SaveForm() {
+            var name = $("#User").val();
+            var pwd = $("#Password").val();
+            var email = $("#Email").val();
+
+            if (name == '' || pwd == '' || email == '') {
+                $("#message1").hide();
+                $("#message2").show();
+                event.preventDefault();
+                return false;
+            }
+
+            var data = $("#Registration").serialize();
+            $.ajax({
+                type: "post",
+                data: data,
+                url: "/Register/SaveData",
+                success: function (result) {
+                    event.preventDefault();
+                    $("#message1").show();
+                    $("#message2").hide();
+                    $("#Registration")[0].reset();
+                }
+            });
+            event.preventDefault();
+        }
+
+        $("#msg").hide();
+        var Login = function () {
+            var data = $("#loginForm").serialize();
+            $.ajax({
+                type: "post",
+                url: "Register/CheckVaildUser",
+                data: data,
+                success: function (result) {
+                    if (result == "Fail") {
+                        $("#loginForm")[0].reset();
+                        $("#msg").show();
+                    }
+                    else {
+                        window.location.href = "/Register/AfterLogin"
+                        $("#msg").hide();
+                    }
+
+                }
+            });
+
+        }
+    </script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body id="phpbb" class="nojs notouch section-index ltr  ">
+
+    <div class="header-container">
+
+        <div class="header-very-top">
+            <div class="header-very-top-child">
+                <nav>
+
+                    <ul id="menu-main" class="nav">
+                        <li class="menu-item menu-item-1"><a href="about-us.html">About Us</a></li>
+                        <li class="parent menu-item menu-item-2"><a href="indexf2f0.html?sid=4a1d33adf2a9ccf345a348a369e54799">Forums</a>
+                            <ul class="sub-menu">
+                                <li class="parent menu-item"><a href="viewforum58da.html?f=1">General discussion</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="viewforum12a3.html?f=2">What's new</a></li>
+                                        <li class="menu-item"><a href="viewforum4d6b.html?f=3">Suggestions</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item"><a href="viewforum31e6.html?f=4">Hyde Park</a></li>
+                                <li class="menu-item"><a href="viewforume774.html?f=5">Announcements</a></li>
+                                <li class="parent menu-item"><a href="viewforumcf19.html?f=6">Travel</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="viewforumd42b.html?f=7">Forum password protected</a></li>
+                                        <li class="menu-item"><a href="viewforum957d.html?f=8">Asia</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item-2"><a href="search598b.html?search_id=active_topics&amp;sid=4a1d33adf2a9ccf345a348a369e54799">Active topics</a></li>
+                        <li class="menu-item menu-item-4"><a href="search9a68.html?search_id=unanswered&amp;sid=4a1d33adf2a9ccf345a348a369e54799">Unanswered topics</a></li>
+                        <li class="menu-item menu-item-5"><a href="faqf2f0.html?sid=4a1d33adf2a9ccf345a348a369e54799">FAQ</a></li>
+                        <li class="menu-item menu-item-6"><a href="memberlisteb9e.html?mode=team&amp;sid=4a1d33adf2a9ccf345a348a369e54799">The team</a></li>
+                        <li class="menu-item menu-item-7"><a href="memberlistf2f0.html?sid=4a1d33adf2a9ccf345a348a369e54799">Members</a></li>
+                        <li class="menu-item menu-item-8"><a href="memberlist3418.html?mode=contactadmin&amp;sid=4a1d33adf2a9ccf345a348a369e54799">Contact us</a></li>
+                    </ul>
+                </nav>
+
+
+                <div id="menu-responsive">
+                    <div class="menu">
+                        <ul>
+                            <li class="menu-item menu-item-1"><a href="about-us.html">About Us</a></li>
+                            <li class="parent menu-item menu-item-2"><a href="indexf2f0.html?sid=4a1d33adf2a9ccf345a348a369e54799">Forums</a>
+                                <ul class="sub-menu">
+                                    <li class="parent menu-item"><a href="viewforum58da.html?f=1">General discussion</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a href="viewforum12a3.html?f=2">What's new</a></li>
+                                            <li class="menu-item"><a href="viewforum4d6b.html?f=3">Suggestions</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item"><a href="viewforum31e6.html?f=4">Hyde Park</a></li>
+                                    <li class="menu-item"><a href="viewforume774.html?f=5">Announcements</a></li>
+                                    <li class="parent menu-item"><a href="viewforumcf19.html?f=6">Travel</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a href="viewforumd42b.html?f=7">Forum password protected</a></li>
+                                            <li class="menu-item"><a href="viewforum957d.html?f=8">Asia</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-2"><a href="search598b.html?search_id=active_topics&amp;sid=4a1d33adf2a9ccf345a348a369e54799">Active topics</a></li>
+                            <li class="menu-item menu-item-4"><a href="search9a68.html?search_id=unanswered&amp;sid=4a1d33adf2a9ccf345a348a369e54799">Unanswered topics</a></li>
+                            <li class="menu-item menu-item-5"><a href="faqf2f0.html?sid=4a1d33adf2a9ccf345a348a369e54799">FAQ</a></li>
+                            <li class="menu-item menu-item-6"><a href="memberlisteb9e.html?mode=team&amp;sid=4a1d33adf2a9ccf345a348a369e54799">The team</a></li>
+                            <li class="menu-item menu-item-7"><a href="memberlistf2f0.html?sid=4a1d33adf2a9ccf345a348a369e54799">Members</a></li>
+                            <li class="menu-item menu-item-8"><a href="memberlist3418.html?mode=contactadmin&amp;sid=4a1d33adf2a9ccf345a348a369e54799">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <div class="top-bar-right">
+                    <div class="header-register"><a href="#" style="float: right; cursor: Pointer" onclick="redirectOnClick()">Register</a></div>
+                    <div class="header-login"><a href="ucpcbd8.html?mode=login&amp;sid=4a1d33adf2a9ccf345a348a369e54799" class="header-login-icon" onclick="Login()">Login</a></div>
+                </div>
+                <!--top-bar-right ends-->
+
+            </div>
+            <!-- header-very-top-child -->
+        </div>
+        <!-- header-very-top -->
+
+
+
+
+        <a id="top" class="anchor" accesskey="t"></a>
+
+        <div class="header">
+
+            <div id="page-header">
+                <div class="headerbar" role="banner">
+                    <div class="inner">
+
+                        <div id="site-description">
+                            <div class="logo">
+                                <a href="indexf2f0.html?sid=4a1d33adf2a9ccf345a348a369e54799" title="Board index">
+                                    <img src="../../styles/unitedforum/theme/images/logo.png" alt="Diabolique Design" /></a>
+                            </div>
+                            <div class="side-desc">phpBB is a free flat-forum bulletin board software solution that can be used to stay in touch with a group of people or can power your entire website.</div>
+                            <p class="skiplink"><a href="#start_here">Skip to content</a></p>
+                        </div>
+
+                        <div class="search-header" role="search">
+                            <form action="http://diaboliquedesign.com/demo/1/search.php?sid=4a1d33adf2a9ccf345a348a369e54799" method="get" id="search">
+                                <fieldset>
+                                    <input name="keywords" type="search" maxlength="128" title="Search for keywords" class="searchinput" value="" placeholder="Search…" />
+                                    <button class="search-icon-header" type="submit" title="Search"></button>
+                                    <a href="searchf2f0.html?sid=4a1d33adf2a9ccf345a348a369e54799" class="search-adv-icon" title="Advanced search"></a>
+                                    <input type="hidden" name="sid" value="4a1d33adf2a9ccf345a348a369e54799" />
+
+                                </fieldset>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- header -->
+
+        <div class="header-container-cover"></div>
+    </div>
+    <!-- header-container -->
+
+    <div class="breadcrumbs-container">
+        <ul id="nav-breadcrumbs" class="linklist navlinks" role="menubar">
+            <li class="breadcrumbs">
+                <span class="crumb" itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="indexf2f0.html?sid=4a1d33adf2a9ccf345a348a369e54799" accesskey="h" data-navbar-reference="index" itemprop="url"><span itemprop="title">Board index</span></a></span>
+            </li>
+
+            <li class="rightside responsive-search" style="display: none;"><a href="searchf2f0.html?sid=4a1d33adf2a9ccf345a348a369e54799" title="View the advanced search options" role="menuitem">Search</a></li>
+        </ul>
+    </div>
+    <!-- breadcrumbs-container -->
+
+    <a id="start_here" class="anchor"></a>
+    <div id="wrap">
+        <div id="page-body" role="main">
+
+            <div class="forabg" id="forumBag2">
+                <div class="inner">
+                    <ul class="topiclist">
+                        <li class="header">
+                            <dl class="icon">
+                                <dt>
+                                    <div class="list-inner"><a href="viewforum77f4.html?f=10&amp;sid=4a1d33adf2a9ccf345a348a369e54799">Fusce interdum quam</a></div>
+                                </dt>
+                                <dd></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                    <ul class="topiclist forums">
+
+
+
+
+
+                        <li class="row">
+                            <dl class="icon forum_read">
+                                <dt title="No unread posts">
+                                    <div class="list-inner">
+
+                                        <a href="viewforumbd53.html?f=11&amp;sid=4a1d33adf2a9ccf345a348a369e54799" class="forumtitle">Curabitur eu gravida</a>
+
+                                        <div class="forumtitle-below">
+                                            <span class="forum-stats"><span>1 Topics</span><span>3 Posts</span></span>
+                                        </div>
+
+                                        <p class="forum-desc">Etiam tempor nisl vitae urna egestas, at viverra leo aliquet. Morbi rutrum, lorem ac dapibus fermentum, nulla neque rhoncus arcu, ut scelerisque lectus neque sit amet arcu. Nulla a dui nec elit varius accumsan.</p>
+
+                                    </div>
+                                </dt>
+
+                                <dd class="lastpost"><span>
+                                    <a href="viewtopic95cc.html?f=11&amp;p=46&amp;sid=4a1d33adf2a9ccf345a348a369e54799#p46" title="Re: The only true wisdom is in knowing you know nothing" class="lastsubject">"Re: The only true wisdom is i…"</a> -
+												by <a href="memberlist9451.html?mode=viewprofile&amp;u=49&amp;sid=4a1d33adf2a9ccf345a348a369e54799" class="username">Nicole</a>
+                                    <br />
+                                    06 Nov 2016</span>
+                                </dd>
+                            </dl>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <div id="sidebar">
+
+            <div id="sidebar-login">
+
+                <div id="sidebar-login-title">Log In</div>
+                <div id="sidebar-login-desc">Login to your account and check new messages.</div>
+
+                <form method="post" action="http://diaboliquedesign.com/demo/1/ucp.php?mode=login&amp;sid=4a1d33adf2a9ccf345a348a369e54799">
+                    <fieldset class="quick-login">
+                        <label>
+                            Username:<br>
+                            <input type="text" tabindex="100" name="username" id="sidebar-user-login" title="Username" /></label>
+
+                        <label>
+                            Password:<br>
+                            <input type="password" tabindex="101" name="password" id="sidebar-user-pass" title="Password" /></label>
+
+                        <div class="forgetmenot">
+                            <a href="ucpafd4.html?mode=sendpassword&amp;sid=4a1d33adf2a9ccf345a348a369e54799">I forgot my password</a>
+                            <label>
+                                Remember me
+                                <input type="checkbox" tabindex="102" name="autologin" id="autologin" /></label>
+                        </div>
+
+                        <input type="submit" name="login" id="sidebar-login-submit" value="Log In" tabindex="103" onclick="Login()" />
+                        <input type="hidden" name="redirect" value="indexf2f0.html?sid=4a1d33adf2a9ccf345a348a369e54799" />
+
+                    </fieldset>
+                </form>
+
+            </div>
+            <!-- #sidebar-login -->
+
+
+
+
+
+            <div class="advertisement">
+                <div class="advertisement-title">Advertisement</div>
+                <a href="#" title="">
+                    <img src="ad.jpg" alt="Ad" /></a>
+            </div>
+
+
+
+            <div class="general-stats">
+                <div class="general-stats-col-1">
+                    50000
+
+                    <div>MEMBERS</div>
+                </div>
+
+                <div class="general-stats-col-2">
+                    73000
+
+                    <div>TOPICS</div>
+                </div>
+
+                <div class="general-stats-col-3">
+                    235000
+
+                    <div>POSTS</div>
+                </div>
+
+                <div class="clear"></div>
+
+
+                <div class="stat-block online-list">
+                    <h3><a href="viewonlinef2f0.html?sid=4a1d33adf2a9ccf345a348a369e54799">Who is online</a></h3>
+                    <p>
+                        In total there are <strong>13</strong> users online :: 2 registered, 0 hidden and 11 guests (based on users active over the past 5 minutes). Most users ever online was <strong>57</strong> on 12 Dec 2017
+		
+                        <span class="online-list-registered">Registered users: <a href="memberlist1380.html?mode=viewprofile&amp;u=10446&amp;sid=4a1d33adf2a9ccf345a348a369e54799" class="username">dxtyyfgtujx</a>, <span style="color: #9E8DA7;" class="username-coloured">Yahoo [Bot]</span></span>
+                        <em>Legend: <a style="color: #AA0000" href="memberlist907e.html?mode=group&amp;g=5&amp;sid=4a1d33adf2a9ccf345a348a369e54799">Administrators</a>, <a style="color: #00AA00" href="memberlistd11e.html?mode=group&amp;g=4&amp;sid=4a1d33adf2a9ccf345a348a369e54799">Global moderators</a></em>
+                    </p>
+                </div>
+
+
+
+                <div class="stat-block birthday-list">
+                    <h3>Birthdays</h3>
+                    <p>
+                        No birthdays today				
+                    </p>
+                </div>
+
+
+
+            </div>
+            <!-- general-stats -->
+
+
+        </div>
+        <!-- #sidebar -->
+
+        <div class="clear"></div>
+
+
+
+
+        <div id="page-footer">
+
+
+            <div class="navbar" role="navigation">
+                <div class="inner">
+
+                    <ul id="nav-footer" class="linklist">
+
+
+                        <li><a href="ucp6a29.html?mode=delete_cookies&amp;sid=4a1d33adf2a9ccf345a348a369e54799" data-ajax="true" data-refresh="true">Delete all board cookies</a></li>
+                        <li data-last-responsive="true"><a href="memberlistf2f0.html?sid=4a1d33adf2a9ccf345a348a369e54799" title="View complete list of members">Members</a></li>
+                        <li data-last-responsive="true"><a href="memberlisteb9e.html?mode=team&amp;sid=4a1d33adf2a9ccf345a348a369e54799">The team</a></li>
+                        <li data-last-responsive="true"><a href="memberlist3418.html?mode=contactadmin&amp;sid=4a1d33adf2a9ccf345a348a369e54799">Contact us</a></li>
+                        <li>All times are
+                            <abbr title="UTC">UTC</abbr></li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="footer-copyright">
+                <a href="indexf2f0.html?sid=4a1d33adf2a9ccf345a348a369e54799" title="Diabolique Design">
+                    <img src="../../styles/unitedforum/theme/images/favicon.png" alt="Diabolique Design" /></a>
+                <div class="footer-copyright-text">
+                    &copy;
+                    <script type="text/javascript">document.write(new Date().getFullYear());</script>
+                    Diabolique Design / <a href="http://emojione.com/">EmojiOne</a>
+                </div>
+            </div>
+
+
+            <div id="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+                <div id="darken">&nbsp;</div>
+            </div>
+
+            <div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+                <a href="#" class="alert_close"></a>
+                <h3 class="alert_title">&nbsp;</h3>
+                <p class="alert_text"></p>
+            </div>
+            <div id="phpbb_confirm" class="phpbb_alert">
+                <a href="#" class="alert_close"></a>
+                <div class="alert_text"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="modal fade" id="ShowModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+                <h4>Registration Form</h4>
+                <div id="message1">
+                    <div class="alert alert-success">
+                        <span class="glyphicon glyphicon-ok"></span><strong>Success Message! Your Registration is completed</strong>
+                    </div>
+                </div>
+                <div id="message2">
+                    <div class="alert alert-danger">
+                        <span class="glyphicon glyphicon-remove"></span><strong>Error Message! Your Reguistration is not completed</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <form id="Registration">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input class="form-control" type="text" name="Username" id="User" placeholder="Username" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input class="form-control" type="email" name="EmailID" id="Email" placeholder="Email" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input class="form-control" type="password" name="Password" id="Password" placeholder="Password" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-info form-control" type="submit" onclick="SaveForm()"><i class="glyphicon glyphicon-registration-mark">Submit</i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <a id="bottom" class="anchor" accesskey="z"></a>
+        <img src="cron5c0e.gif?cron_type=cron.task.core.tidy_sessions&amp;sid=4a1d33adf2a9ccf345a348a369e54799" width="1" height="1" alt="cron" />
+    </div>
+
+    <script type="text/javascript" src="../../assets/javascript/jquery.minac81.js?assets_version=6"></script>
+    <script type="text/javascript" src="../../assets/javascript/coreac81.js?assets_version=6"></script>
+    <script type="text/javascript" src="../../styles/unitedforum/template/functions.js"></script>
+
+    <script type="text/javascript" src="../../styles/unitedforum/template/forum_fnac81.js?assets_version=6"></script>
+
+    <script type="text/javascript" src="../../styles/unitedforum/template/ajaxac81.js?assets_version=6"></script>
+
+
+</body>
+
+<!-- Mirrored from diaboliquedesign.com/demo/1/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 24 Dec 2017 13:39:13 GMT -->
+</html>
